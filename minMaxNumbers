@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String arg[]) {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("10 adet gireceğin sayılar arasında en büyük ve en küçük sayıyı bulma\nbitirmek için sıfıra basın");
+
+        int min = 0;
+        int max = 0;
+
+        for (int i=1; i<=10;i++){
+            System.out.print(i+". sayıyı yazınız: ");
+            int sayi= input.nextInt();
+
+            if (i==1){
+                min=sayi;
+                max=sayi;
+
+
+            } else {
+                if (sayi>max)
+                    max=sayi;
+
+                if (sayi<min)
+                    min=sayi;
+            }
+
+        }
+        System.out.println("En Büyük Sayı "+max);
+        System.out.println("En Küçük Sayı "+min);
+        System.out.println("İki sayının arasında ki fark "+(max-min));
+    }
+
+}
